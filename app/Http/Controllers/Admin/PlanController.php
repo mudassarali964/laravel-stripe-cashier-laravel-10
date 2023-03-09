@@ -114,6 +114,7 @@ class PlanController extends Controller
                     'stripe_product' => $product->id,
                     'stripe_plan' => $price->id,
                     'price' => $request->price,
+                    'interval' => $request->interval,
                     'description' => $request->description
                 ]);
             }
