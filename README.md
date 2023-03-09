@@ -173,18 +173,18 @@ proceeded to get Stripe Key and Secret. So, Let's open below stripe official web
     https://stripe.com/en-in
 2. After login, You need to go on Developers tab and get API keys.
 3. Use API keys in .env file as:
-    STRIPE_KEY = '...'
-    STRIPE_SECRET = '...'
+> STRIPE_KEY = '...'
+> STRIPE_SECRET = '...'
 4. Finally login as admin and create the new plans. 
     go to this link http://127.0.0.1:8000/admin/plans/create
     NOTE: This would be create a plan, first in your stripe account (https://dashboard.stripe.com/test/products) 
     and second it will create in the database.
 
 > If you didn't create plan one by one manually so simply you will run a seeder named as `PlanSeeder`
-> Before run the seeder you need to create your plan manually from the stripe dashboard (https://dashboard.stripe.com/test/products)
-> Hit on top right `Add product`
-> After the product has created, copy the `price_id` and `product_id` 
-> Then paste these ids into PlaneSeeder `stripe_product` and `stripe_plan`
+* Before run the seeder you need to create your plan manually from the stripe dashboard (https://dashboard.stripe.com/test/products)
+* Hit on top right `Add product`
+* After the product has created, copy the `price_id` and `product_id` 
+* Then paste these ids into PlaneSeeder `stripe_product` and `stripe_plan`
 ``` bash
 
 # Run bellow command for run PlanSeeder seeder:
@@ -199,4 +199,3 @@ $ php artisan db:seed --class=PlanSeeder
 * CSV: 123 
 * Expiration Month: 12 
 * Expiration Year: 2028
-* 
