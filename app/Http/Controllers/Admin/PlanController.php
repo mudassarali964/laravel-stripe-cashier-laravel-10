@@ -35,7 +35,7 @@ class PlanController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:150',
-            'price' => 'required|between:0,1000.00',
+            'price' => 'required|numeric|between:0,1000',
             'description' => 'required'
         ]);
 
