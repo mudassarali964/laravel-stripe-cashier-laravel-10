@@ -1,5 +1,9 @@
 # Laravel Stripe Cashier - Laravel-10
 
+<img width="1430" alt="Stripe_admin_dashboard" src="https://user-images.githubusercontent.com/55048197/224141687-f339bf49-a2d1-43f0-bf3d-8b8fc4cca61f.png">
+<img width="1430" alt="stripe_all_plans" src="https://user-images.githubusercontent.com/55048197/224142319-ce162a15-5ed1-4fa1-9c16-294775690e47.png">
+<img width="1430" alt="stripe_plans" src="https://user-images.githubusercontent.com/55048197/224142398-f8868629-0d6d-4e09-b89c-8f15cde5e80a.png">
+
 ## Installation
 
 ``` bash
@@ -172,16 +176,25 @@ $ php artisan migrate
 proceeded to get Stripe Key and Secret. So, Let's open below stripe official website using the below link:
     https://stripe.com/en-in
 2. After login, You need to go on Developers tab and get API keys.
+
+<img width="1430" alt="stripe_API_Keys" src="https://user-images.githubusercontent.com/55048197/224141926-79a51d27-483e-44fc-82ea-94a51f06e72f.png">
+
 3. Use API keys in .env file as:
 > STRIPE_KEY = '...'
 > STRIPE_SECRET = '...'
 4. Finally login as admin and create the new plans. 
     go to this link http://127.0.0.1:8000/admin/plans/create
+    
+    <img width="1430" alt="stripe_create_new_plan" src="https://user-images.githubusercontent.com/55048197/224142041-34a6697f-ed76-48b8-a67b-c9255dcf8dd2.png">
+
     NOTE: This would be create a plan, first in your stripe account (https://dashboard.stripe.com/test/products) 
     and second it will create in the database.
 
-> If you didn't create plan one by one manually so simply you will run a seeder named as `PlanSeeder`
+> If you didn't create plan one by one manually (from admin panel) so simply you will run a seeder named as `PlanSeeder`
 * Before run the seeder you need to create your plan manually from the stripe dashboard (https://dashboard.stripe.com/test/products)
+
+<img width="1430" alt="stripe_product_list" src="https://user-images.githubusercontent.com/55048197/224142903-331d807c-b86c-4a60-ba66-18c384f673d6.png">
+
 * Hit on top right `Add product`
 * After the product has created, copy the `price_id` and `product_id` 
 * Then paste these ids into PlaneSeeder `stripe_product` and `stripe_plan`
