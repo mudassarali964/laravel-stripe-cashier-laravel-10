@@ -24,13 +24,16 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware("auth")->group(function () {
+
+    // User Dashboard Route
     Route::get('stripe_plans', [StripeController::class, 'index'])->name('stripe_plans.index');
     Route::get('stripe_plans/{plan}', [StripeController::class, 'show'])->name("stripe_plans.show");
     Route::post('subscription', [StripeController::class, 'subscription'])->name("subscription.create");
-});
 
-// Admin Dashboard Route
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
-    Route::resource('plans', PlanController::class);
-    Route::get('/', [AdminController::class, 'index'])->name('index');
+    // Admin Dashboard Route
+    Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+        Route::get('/', [AdminController::class, 'index'])->name('index');
+        Route::resource('plans', PlanController::class);
+    });
+
 });
