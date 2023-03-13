@@ -33,7 +33,7 @@ Then in file ".env" replace this database configuration:
 * DB_CONNECTION=mysql
 * DB_HOST=127.0.0.1
 * DB_PORT=3306
-* DB_DATABASE=laravel_admin
+* DB_DATABASE=laravel_cashier
 * DB_USERNAME=root
 * DB_PASSWORD=
 
@@ -62,7 +62,7 @@ postgres= \q
 ```
 4. Create database
 ``` bash
-$ sudo -u postgres createdb laravel
+$ sudo -u postgres createdb laravel_cashier
 ```
 5. Copy file ".env.example", and change its name to ".env".
    Then in file ".env" replace this database configuration:
@@ -70,7 +70,7 @@ $ sudo -u postgres createdb laravel
 * DB_CONNECTION=mysql
 * DB_HOST=127.0.0.1
 * DB_PORT=3306
-* DB_DATABASE=laravel_admin
+* DB_DATABASE=laravel_cashier
 * DB_USERNAME=root
 * DB_PASSWORD=
 
@@ -79,7 +79,7 @@ To this:
 * DB_CONNECTION=pgsql
 * DB_HOST=127.0.0.1
 * DB_PORT=5432
-* DB_DATABASE=laravel_admin
+* DB_DATABASE=laravel_cashier
 * DB_USERNAME=laravel
 * DB_PASSWORD=password
 
@@ -90,7 +90,7 @@ Then in file ".env" complete this database configuration:
 * DB_CONNECTION=mysql
 * DB_HOST=127.0.0.1
 * DB_PORT=3306
-* DB_DATABASE=laravel_admin
+* DB_DATABASE=laravel_cashier
 * DB_USERNAME=root
 * DB_PASSWORD=
 
